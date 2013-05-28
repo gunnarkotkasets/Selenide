@@ -28,7 +28,7 @@ On the left, there is a folder named Webtest, expand this folder.
 Open pom.xml file.
 
 Replace the contents with this:
-==============================================================
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -74,7 +74,7 @@ Replace the contents with this:
         </dependencies>
     </dependencyManagement>
 </project>
-==============================================================
+
 
 Now, on the right upper side there is a message: "Maven Projects need to be imported"
 Press 'Enable Auto-Import'
