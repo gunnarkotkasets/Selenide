@@ -100,3 +100,29 @@ As a result, there should be ../Program Files/Java/jdk1.7.x_xx
 
 7. The first test...
 --------------------------
+
+* Open the newly created Webtest.java class
+* Replace the contents with this:
+
+         import org.junit.Test;
+         
+         import static com.codeborne.selenide.Condition.text;
+         import static com.codeborne.selenide.Selenide.*;
+
+         public class Webtest {
+         
+             @Test
+             public void openTest(){
+                 open("https://ntd2013-workshop.herokuapp.com");
+                 $(".page-header").shouldHave(text("Articles"));
+             }
+         }
+         
+8. Run the test
+--------------------------
+
+* On the left, right click on our Webtest item.
+* Click on Run 'Webtest'
+
+Then a mozilla browser should start for a moment
+* If a green text "All Tests Passed" is visible, you are ready for the NTD Selenide workshop
