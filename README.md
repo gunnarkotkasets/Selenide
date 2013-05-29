@@ -124,7 +124,7 @@ As a result, there should be ../Program Files/Java/jdk1.7.x_xx
 * On the left, right click on our Webtest item.
 * Click on Run 'Webtest'
 
-Then a mozilla browser should start for a moment
+Then a mozilla browser should start for a moment and then close.
 * On the left, if there is a green text "All Tests Passed", you are ready for the NTD Selenide workshop
 
 9. Eclipse users
