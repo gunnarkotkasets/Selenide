@@ -125,4 +125,20 @@ As a result, there should be ../Program Files/Java/jdk1.7.x_xx
 * Click on Run 'Webtest'
 
 Then a mozilla browser should start for a moment
-* If a green text "All Tests Passed" is visible, you are ready for the NTD Selenide workshop
+* On the left, if there is a green text "All Tests Passed", you are ready for the NTD Selenide workshop
+
+9. Eclipse users
+--------------------------
+Eclipse does not have Maven installed by default.
+
+* Add Maven plugin to eclipse:
+* Open Eclipse. Help -> Install new Software
+* Work with, choose --All available Sites--
+* Below, type 'Maven'
+* Choose the newest 'm2e - Maven Integration for Eclipse'
+* Press Next
+* Next
+* I accept
+* Finish
+
+* Then follow the IDEA steps to setup Selenide
