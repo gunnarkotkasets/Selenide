@@ -142,3 +142,8 @@ Eclipse does not have Maven installed by default.
 * Finish
 
 * Then follow the IDEA steps to setup Selenide
+
+Selenide wiki
+--------------------------
+
+* https://github.com/codeborne/selenide
