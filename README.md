@@ -126,6 +126,7 @@ As a result, there should be ../Program Files/Java/jdk1.7.x_xx
 
 Then a mozilla browser should start for a moment and then close.
 * On the left, if there is a green text "All Tests Passed", you are ready for the NTD Selenide workshop
+* If the test fails, try to run again: sometimes the web is too slow
 
 9. Eclipse users
 --------------------------
