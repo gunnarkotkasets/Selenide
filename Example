@@ -1,0 +1,52 @@
+  import org.junit.AfterClass;
+  import org.junit.BeforeClass;
+  import org.junit.Test;
+  import org.openqa.selenium.By;
+  import org.openqa.selenium.WebDriver;
+  import org.openqa.selenium.firefox.FirefoxDriver;
+  
+  import java.util.concurrent.TimeUnit;
+  
+  import static com.codeborne.selenide.Condition.text;
+  import static com.codeborne.selenide.Condition.visible;
+  import static com.codeborne.selenide.Selenide.*;
+  
+  public class Webtest {
+  
+      @BeforeClass
+      public static void login(){
+          //System.setProperty("webdriver.firefox.bin",
+          //        "C:\Program Files\Mozilla Firefox\firefox.exe")
+          WebDriver driver = new FirefoxDriver();
+          driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+          open("https://ntd2013-workshop.herokuapp.com");
+          $(By.linkText("Log in")).click();
+          $("#name").sendKeys("Valdo");
+          $("#password").sendKeys("1234");
+          $(".btn-primary").click();
+          $(".page-header").shouldHave(text("Users"));
+      }
+  
+      @AfterClass
+      public static void logout(){
+          $(By.linkText("Log out")).click();
+          $(".page-header").shouldHave(text("Articles"));
+          $(By.linkText("Log in")).shouldBe(visible);
+      }
+  
+      @Test
+      public void openTest(){
+          $(By.linkText("NTD 2013 Workshop")).click();
+          $(".page-header").shouldHave(text("Articles"));
+          $("footer").shouldHave(text("Nordic Testing Days 2013"));
+      }
+  
+     @Test
+     public void createArticle(){
+         $(By.linkText("Articles")).click();
+         $(By.linkText("New")).click();
+         $("#article_title").sendKeys("Article about dogs");
+         $("#article_content").sendKeys("There is some content");
+         $(".btn.btn-primary").click();
+     }
+  }
